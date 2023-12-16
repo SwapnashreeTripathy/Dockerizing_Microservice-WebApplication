@@ -72,6 +72,7 @@ sudo docker run -it -d -p 8080:80 htmlapp-st
 ## Build Docker-Compose file to run the Container
 - Instead of running the container manually you can also write an Docker-Compose file and run it.
 ```
+#---------------------------------Docker-Compose.yml------------------
 version: '3'
 services:
   web:
@@ -80,6 +81,14 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:80"
+#-------------------------------------------------------------------------
+```
+- Run below command to Create an Image from `Docker-Compose.yml` file if not created already.
+```
+Docker-compose build 
+```
+- To start the container defined in your docker-compose.yml file, run the below command.
+```
 ```
 ## Create an Public AWS ECR and Push your image into it
 - You can Push your Image to AWS ECR and to do this, Install and configure AWS CLI with your AWS Access Key(create an Access Key).
