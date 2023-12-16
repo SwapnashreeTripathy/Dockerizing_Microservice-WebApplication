@@ -53,4 +53,6 @@ COPY nginx.conf /etc/nginx/sites-available/nginx.conf
 EXPOSE 80
 #--------------------------------------------------------------------
 ```
- 
+- Create an Image by running below command.
+```
+```
