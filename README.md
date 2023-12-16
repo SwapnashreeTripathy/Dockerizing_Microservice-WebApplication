@@ -63,7 +63,38 @@ sudo docker images
 ```
 sudo docker run -it -d -p 8080:80 htmlapp-st 
 ```
-![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/9ad8b3af-34e8-48e9-8297-bd1c1e3b62c9)
+
 ![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/1c258e73-7ef6-4a37-a463-4626f716c3e5)
+- Now Access your EC2 server by using it's Public IP with port 8080.
+ 
 ![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/a75f65cb-f716-4d1a-a586-631ac0781d30)
+
+## Build Docker-Compose file to run the Container
+- Instead of running the container manually you can also write an Docker-Compose file and run it.
+```
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+```
+## Create an Public AWS ECR and Push your image into it
+- You can Push your Image to AWS ECR and to do this, Install and configure AWS CLI with your AWS Access Key(create an Access Key).
+```
+ sudo apt install awscli -y
+ aws --version
+ aws configure
+
+ AWS Access Key ID: --> Provide your Access Key ID
+ AWS secret Acess Key: --> Provide your Access Key
+ Default region name: ap-south-1(For Mumabi Region)
+ Default output format: json
+```
+- let's create an AWS Access Key, by going in AWS IAM. And Download the CSV file while creating it.
+![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/30db67ab-7149-4da5-9e25-5a67407a77b5)
+![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/250f5438-0d5f-40f4-9fa3-a72ba2e36493)
+![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/a40f1f0d-6c06-4566-bc24-0469863ca472)
 
