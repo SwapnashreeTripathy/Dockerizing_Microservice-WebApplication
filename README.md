@@ -38,5 +38,19 @@ server {
 }
 #------------------------------------------------------------------
 ```
+- the path "/usr/share/nginx/html" will store your "index.html" file inside your container.
 
+## Write an Dockerfile to create an Image
+- here, take the basic Image of Nginx and top os this we will create layers for Image for our HTML page.
+- coping both `nginx.conf` & `index.html` file into their respective folders for the Image.
+```
+#----------------------------dockerfile------------------------------
+FROM nginx:latest
+# Copy HTML file to serve
+COPY index.html /usr/share/nginx/html/index.html
+COPY nginx.conf /etc/nginx/sites-available/nginx.conf
+# Expose port 80
+EXPOSE 80
+#--------------------------------------------------------------------
+```
  
