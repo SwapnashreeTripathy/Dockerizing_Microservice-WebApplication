@@ -71,6 +71,12 @@ sudo docker run -it -d -p 8080:80 htmlapp-st
 
 ## Build Docker-Compose file to run the Container
 - Instead of running the container manually you can also write an Docker-Compose file and run it.
+- Install Docker-Compose.
+```
+sudo snap install docker
+sudo apt  install docker-compose
+```
+
 ```
 #---------------------------------Docker-Compose.yml------------------
 version: '3'
