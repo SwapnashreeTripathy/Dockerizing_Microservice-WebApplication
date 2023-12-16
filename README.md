@@ -83,6 +83,9 @@ services:
 ```
 ## Create an Public AWS ECR and Push your image into it
 - You can Push your Image to AWS ECR and to do this, Install and configure AWS CLI with your AWS Access Key(create an Access Key).
+- let's create an AWS Access Key, by going in AWS IAM. And Download the CSV file while creating it.
+![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/30db67ab-7149-4da5-9e25-5a67407a77b5)
+![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/250f5438-0d5f-40f4-9fa3-a72ba2e36493)
 ```
  sudo apt install awscli -y
  aws --version
@@ -93,8 +96,25 @@ services:
  Default region name: ap-south-1(For Mumabi Region)
  Default output format: json
 ```
-- let's create an AWS Access Key, by going in AWS IAM. And Download the CSV file while creating it.
-![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/30db67ab-7149-4da5-9e25-5a67407a77b5)
-![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/250f5438-0d5f-40f4-9fa3-a72ba2e36493)
+
 ![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/a40f1f0d-6c06-4566-bc24-0469863ca472)
+
+## Create an Public AWS ECR and Push your image into it
+
+- Once the AWS CLI has been configured, Create an Public Repository in ECR and  can Push your Image to ECR by following below instrictions.
+- Click on "View PUSH Command" Option in ECR to get the commands. 
+- Run these command on EC2 after configuring AWS CLI.
+![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/3223af21-d352-4d16-9fcb-85c1dea5de7c)
+![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/5129445c-232a-4458-8b8f-248dacc521a6)
+![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/8b8c1c49-f435-4379-85f3-019a4d5de471)
+![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/de529c81-2627-4e01-a90d-2ce13313def4)
+![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/04f186fe-398f-44fd-a84d-42935e39df75)
+
+ Voilà!!!!!You've Suceddfully Pushed your HTML webpage Image to ECR as well.
+
+```
+https://gallery.ecr.aws/<provide your ECR URI>
+https://gallery.ecr.aws/c3w1m1q2/swapn-docker
+``` 
+![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/d0adc7af-f7c9-4959-81ec-74eeee3385fd)
 
