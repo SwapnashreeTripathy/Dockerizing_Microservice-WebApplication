@@ -55,4 +55,15 @@ EXPOSE 80
 ```
 - Create an Image by running below command.
 ```
+git clone https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver.git
+sudo docker build -t htmlapp-st<provide a name Image> .
+sudo docker images
 ```
+- Use this Command to create Docker Container Manually and We are accessing our HTML page by 8080 port while Ngnix is running at port 80.
+```
+sudo docker run -it -d -p 8080:80 htmlapp-st 
+```
+![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/9ad8b3af-34e8-48e9-8297-bd1c1e3b62c9)
+![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/1c258e73-7ef6-4a37-a463-4626f716c3e5)
+![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/a75f65cb-f716-4d1a-a586-631ac0781d30)
+
