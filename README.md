@@ -84,7 +84,7 @@ services:
   web:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: dockerfile
     ports:
       - "8080:80"
 #-------------------------------------------------------------------------
@@ -93,9 +93,16 @@ services:
 ```
 Docker-compose build 
 ```
+![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/3efa589e-f3fd-42a0-ad66-e26e61a457e0)
+![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/cda00e3a-4914-4c71-90cd-20ed0144e4c7)
+
 - To start the container defined in your docker-compose.yml file, run the below command.
+Note: You have move inside the Folder in which Docker-compose.yml file present.
 ```
+sudo docker-compose up
 ```
+![image](https://github.com/SwapnashreeTripathy/Dockerizing_custom_webserver/assets/139486876/2d15658b-2b43-4f81-b28d-d29fcf77b0a5)
+
 ## Create an Public AWS ECR and Push your image into it
 - You can Push your Image to AWS ECR and to do this, Install and configure AWS CLI with your AWS Access Key(create an Access Key).
 - let's create an AWS Access Key, by going in AWS IAM. And Download the CSV file while creating it.
