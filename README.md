@@ -1,5 +1,7 @@
 # Dockerize HTML-page With NGINX Webserver & Push it to AWS ECR
-In this project we are using Docker and to containerize a HTML web page, using Nginx as the web server and Upload your Image to AWS ECR(Amazon Elastic Container Registry).
+In this project we are using Docker and to containerize a HTML web page, using Nginx as the web server and Upload your Image to AWS ECR(Amazon Elastic Container Registry).<br>
+
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FSwapnashreeTripathy%2FDockerizing_custom_webserver&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 # Objective:
 1. [Creation and Configuration of an EC2 Instance](#Creation and Configuration of an EC2 Instance)
 3. Create a HTML webpage and Nginx File Configuration to establish Reverse Proxy.
